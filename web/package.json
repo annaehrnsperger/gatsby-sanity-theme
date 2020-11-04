@@ -1,0 +1,62 @@
+{
+  "name": "gatsby-sanity-theme",
+  "private": true,
+  "description": "A blank theme for Gatsby and Sanity.",
+  "version": "0.1.0",
+  "author": "Anna Ehrnsperger",
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "no-console": 1,
+      "react/prop-types": 1
+    }
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "babel-plugin-styled-components": "^1.11.1",
+    "dotenv": "^8.2.0",
+    "emotion": "^10.0.27",
+    "framer-motion": "^2.9.4",
+    "gatsby": "^2.25.1",
+    "gatsby-image": "^2.4.21",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-styled-components": "^3.3.14",
+    "gatsby-source-sanity": "^6.0.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "esm": "^3.2.25",
+    "prettier": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/annaehrnsperger/gatsby-sanity-theme.git"
+  }
+}
