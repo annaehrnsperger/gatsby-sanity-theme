@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
+require('dotenv').config({
+  path: `.env`,
+});
 
-dotenv.config({ path: '.env' });
-
-export default {
+module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `A blank theme for Gatsby.`,

@@ -39,6 +39,10 @@ const Normalize = createGlobalStyle`
     margin: 0;
   }
 
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
   textarea {
     border-radius: 0;
     background: none;

@@ -6,11 +6,10 @@
   "author": "Anna Ehrnsperger",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
-    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
+    "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "eslintConfig": {
