@@ -37,3 +37,15 @@ export default {
     },
   },
 };
+
+// preview: {
+//   select: {
+//     title: 'image.alt',
+//   },
+//   prepare({ title }) {
+//     return {
+//       title,
+//       media: FiUsers,
+//     };
+//   },
+// },

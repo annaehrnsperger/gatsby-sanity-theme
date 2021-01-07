@@ -14,4 +14,11 @@ export default {
       title: 'Content',
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Legal',
+      };
+    },
+  },
 };

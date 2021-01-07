@@ -9,4 +9,11 @@ export default {
       title: 'Title',
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Blog Page',
+      };
+    },
+  },
 };

@@ -20,4 +20,11 @@ export default {
       ],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Projects Page',
+      };
+    },
+  },
 };

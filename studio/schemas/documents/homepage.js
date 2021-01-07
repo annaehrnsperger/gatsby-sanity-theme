@@ -14,4 +14,11 @@ export default {
       title: 'Description',
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Homepage',
+      };
+    },
+  },
 };
