@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { injectGlobal } from 'emotion';
-import GlobalStyles from '../styles/GlobalStyles';
-import Normalize from '../styles/Normalize';
-import Variables from '../styles/Variables';
+import GlobalStyles from '../../styles/GlobalStyles';
+import Normalize from '../../styles/Normalize';
+import Variables from '../../styles/Variables';
 
-import Header from './header';
-import Footer from './footer';
-import Nav from './nav';
+import Header from '../molecules/header';
+import Footer from '../footer';
 
 const Layout = ({ children }) => {
   const { settings } = useStaticQuery(graphql`
@@ -47,7 +46,6 @@ const Layout = ({ children }) => {
        * Content
        */}
       <Header />
-      <Nav />
       <main>{children}</main>
       <Footer />
     </>

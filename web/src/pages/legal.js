@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/organisms/layout';
+import SEO from '../components/organisms/seo';
 
 const LegalPage = ({ data }) => {
   const { title } = data.legalNotice.nodes[0];

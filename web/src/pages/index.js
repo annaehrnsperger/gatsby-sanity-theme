@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { useConsole } from '../hooks/useConsole';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import RichText from '../components/richtext';
+import Layout from '../components/organisms/layout';
+import SEO from '../components/organisms/seo';
+import RichText from '../components/atoms/richtext';
 
 const IndexPage = ({ data }) => {
   useConsole();
