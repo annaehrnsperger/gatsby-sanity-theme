@@ -1,37 +1,9 @@
-import path from 'path';
+// const path = require(`path`);
 
-async function projectPage({ graphql, actions }) {
-  const projectTemplate = path.resolve('./src/templates/project.js');
-  const { data } = await graphql(`
-    query Slug {
-      projects: allSanityProject {
-        nodes {
-          slug {
-            current
-          }
-        }
-      }
-    }
-  `);
-
-  data.projects.nodes.forEach((project) => {
-    actions.createPage({
-      path: `projects/${project.slug.current}`,
-      component: projectTemplate,
-      // Data passed to context is available in page queries
-      // as GraphQL variables.
-      context: {
-        slug: project.slug.current,
-      },
-    });
-  });
-}
-
-// async function secondPage({ graphql, actions }) {
-//   const projectTemplate = path.resolve('./src/templates/project.js');
-//   const { data } = await graphql(`
+// exports.createPages = async ({ actions, graphql }) => {
+//   const result = await graphql(`
 //     query Slug {
-//       projects: allSanityProject {
+//       post: allSanityJournalPost {
 //         nodes {
 //           slug {
 //             current
@@ -41,22 +13,15 @@ async function projectPage({ graphql, actions }) {
 //     }
 //   `);
 
-//   data.projects.nodes.forEach((project) => {
+//   const { nodes } = result.data.post;
+
+//   nodes.forEach((post, i) => {
 //     actions.createPage({
-//       path: `projects/${project.slug.current}`,
-//       component: projectTemplate,
-//       // Data passed to context is available in page queries
-//       // as GraphQL variables.
+//       path: `/journal/${post.slug.current}`,
+//       component: path.resolve(`./src/templates/post.js`),
 //       context: {
-//         slug: project.slug.current,
+//         slug: post.slug.current,
 //       },
 //     });
 //   });
-// }
-
-export async function createPages(params) {
-  await Promise.all([
-    projectPage(params),
-    // secondPage(params)
-  ]);
-}
+// };

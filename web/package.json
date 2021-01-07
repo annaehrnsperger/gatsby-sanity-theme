@@ -10,7 +10,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "netlify": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
@@ -18,7 +19,8 @@
     ],
     "rules": {
       "no-console": 1,
-      "react/prop-types": 1
+      "react/prop-types": 1,
+      "require-await": "off"
     }
   },
   "dependencies": {
