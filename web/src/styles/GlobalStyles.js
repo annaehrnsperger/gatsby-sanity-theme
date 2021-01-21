@@ -60,6 +60,10 @@ const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     gap: var(--spacing-XS);
+
+    * {
+      grid-column: 1 / calc(var(--grid-cols) + 1);
+    }
   }
 
   .dark {
