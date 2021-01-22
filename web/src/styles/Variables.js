@@ -25,10 +25,10 @@ const Variables = createGlobalStyle`
     /* Fonts */
     --font-1: 'Lack', sans-serif;
     --font-2: '', serif;
-    /* Clamp Fallback */ --fontsize-1: calc(30px + (60 - 30) * (100vw - 375px) / (2560 - 375));
-    --fontsize-1: clamp(3rem, 5vw, 6rem);
-    /* Clamp Fallback */ --fontsize-2: calc(15px + (30 - 15) * (100vw - 375px) / (2560 - 375));
-    --fontsize-2: clamp(1.5rem, 5vw, 3rem);
+    /* Clamp Fallback */ --headline: calc(30px + (60 - 30) * (100vw - 375px) / (2560 - 375));
+    --headline: clamp(3rem, 5vw, 6rem);
+    /* Clamp Fallback */ --copy: calc(15px + (30 - 15) * (100vw - 375px) / (2560 - 375));
+    --copy: clamp(1.5rem, 5vw, 3rem);
     --letter-spacing: 0.01rem;
     --line-height: 1.2;
 
