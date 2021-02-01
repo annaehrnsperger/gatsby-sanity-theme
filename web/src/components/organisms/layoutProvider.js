@@ -6,10 +6,15 @@ export const LayoutContext = createContext();
 const LayoutProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+
+  const [language, setLanguage] = useState('en');
+
   // const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <LayoutContext.Provider value={{ theme, toggleTheme }}>
+    <LayoutContext.Provider
+      value={{ theme, toggleTheme, language, setLanguage }}
+    >
       {children}
     </LayoutContext.Provider>
   );
@@ -21,8 +26,8 @@ LayoutProvider.propTypes = {
 
 export default LayoutProvider;
 
-// USAFE
-// const { theme, toggleTheme } = useContext(ThemeContext);
+// USAGE
+// const { theme, toggleTheme } = useContext(LayoutContext);
 
 //   return (
 //     <div>

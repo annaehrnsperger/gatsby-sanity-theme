@@ -1,3 +1,5 @@
+import { baseLanguage } from '../languages';
+
 export default {
   name: 'blogPost',
   title: 'Blog Post',
@@ -6,14 +8,14 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'localeString',
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: `title.${baseLanguage.id}`,
         maxLength: 96,
       },
     },
@@ -39,12 +41,12 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'portableText',
+      type: 'localePortableText',
     },
   ],
   preview: {
     select: {
-      title: 'title',
+      title: `title.${baseLanguage.id}`,
       author: 'author.name',
       media: 'mainImage',
     },

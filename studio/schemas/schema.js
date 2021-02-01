@@ -16,6 +16,8 @@ import settings from './documents/settings';
 import author from './objects/author';
 import mainImage from './objects/mainImage';
 import portableText from './objects/portableText';
+import localePortableText from './objects/localePortableText';
+import localeString from './objects/localeString';
 
 export default createSchema({
   name: 'default',
@@ -32,6 +34,8 @@ export default createSchema({
 
     // objects
     author,
+    localePortableText,
+    localeString,
     mainImage,
     portableText,
   ]),
