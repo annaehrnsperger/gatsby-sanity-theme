@@ -9,7 +9,7 @@ import { LayoutContext } from '../components/organisms/layoutProvider';
 
 const IndexPage = ({ data }) => {
   useConsole();
-  const { language } = useContext(LayoutContext);
+  const { language, theme, toggleTheme } = useContext(LayoutContext);
 
   const { title, _rawDescription } = data.homepage.nodes[0];
   const postTitle = data.post.nodes[0].title;
@@ -22,6 +22,13 @@ const IndexPage = ({ data }) => {
       <RichText blocks={_rawDescription} />
       <LanguageSwitch />
       <p>{postTitle[language]}</p>
+      <button type="button" onClick={toggleTheme}>
+        {theme === 'dark' ? 'Light' : 'Dark'}
+      </button>
+      <div className={theme}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat
+        exercitationem consequatur.
+      </div>
     </>
   );
 };

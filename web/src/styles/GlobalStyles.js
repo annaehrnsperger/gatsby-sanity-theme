@@ -69,6 +69,13 @@ const GlobalStyles = createGlobalStyle`
   .dark {
     color: var(--bg-color);
     background: var(--text-color);
+    transition: all 0.3s ease-out;
+  }
+
+  .light {
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: all 0.3s ease-out;
   }
 
 `;
