@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, navigate } from 'gatsby';
 import { useConsole } from '../hooks/useConsole';
 import SEO from '../components/organisms/seo';
 import RichText from '../components/atoms/richtext';
@@ -13,6 +13,10 @@ const IndexPage = ({ data }) => {
 
   const { title, _rawDescription } = data.homepage.nodes[0];
   const postTitle = data.post.nodes[0].title;
+
+  useEffect(() => {
+    navigate(language === 'en' ? '/' : '/de');
+  }, [language]);
 
   return (
     <>

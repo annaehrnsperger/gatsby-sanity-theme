@@ -1,16 +1,18 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useActiveLang } from '../../hooks/useActiveLang';
 
 export const LayoutContext = createContext();
 
 const LayoutProvider = ({ children }) => {
+  const activeLang = useActiveLang();
+
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(activeLang);
 
   // const [navOpen, setNavOpen] = useState(false);
-
   return (
     <LayoutContext.Provider
       value={{ theme, toggleTheme, language, setLanguage }}
