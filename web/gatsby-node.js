@@ -67,16 +67,16 @@ exports.createPages = async ({ actions: { createPage } }) => {
 };
 
 // multiple pages like blog posts
-exports.createPages = ({ actions: { createPage } }) => {
-  const page = {
-    path: 'some-page',
-    component: path.resolve(`./src/templates/some-page.js`),
-    context: {
-      slug: 'some-page-slug',
-    },
-  };
-  createLocalePage(page, createPage);
-};
+// exports.createPages = ({ actions: { createPage } }) => {
+//   const page = {
+//     path: 'some-page',
+//     component: path.resolve(`./src/templates/some-page.js`),
+//     context: {
+//       slug: 'some-page-slug',
+//     },
+//   };
+//   createLocalePage(page, createPage);
+// };
 
 // create all standard pages with localization
 exports.onCreatePage = ({ page, actions: { createPage, deletePage } }) => {
