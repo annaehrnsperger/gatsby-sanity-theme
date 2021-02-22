@@ -21,6 +21,10 @@ const path = require(`path`);
 //       component: path.resolve(`./src/templates/post.js`),
 //       context: {
 //         slug: post.slug.current,
+//         next:
+//         i === posts.length - 1
+//           ? posts[0].slug.current
+//           : posts[i + 1].slug.current,
 //       },
 //     });
 //   });

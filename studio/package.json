@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:annaehrnsperger/generic-gatsby-sanity-theme.git"
+    "url": "git@github.com:annaehrnsperger/gatsby-sanity-theme.git"
   }
 }
