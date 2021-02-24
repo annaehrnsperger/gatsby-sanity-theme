@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `A blank theme for Gatsby.`,
+    title: `Gatsby Starter`,
+    description: `A blank starter for Gatsby.`,
     author: `Anna Ehrnsperger`,
   },
   plugins: [

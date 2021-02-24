@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-size: var(--fontsize-1);
+    font-size: var(--copy);
     line-height: var(--line-height);
   }
 

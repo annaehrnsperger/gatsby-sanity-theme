@@ -1,4 +1,4 @@
-# Gatsby Sanity Theme
+# Gatsby Sanity Starter
 
 <!-- ### [www.url.de](https://www.url.de) -->
 

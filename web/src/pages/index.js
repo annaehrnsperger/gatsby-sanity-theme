@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   const postTitle = data.post.nodes[0].title;
 
   useEffect(() => {
-    navigate(language === 'en' ? '/' : '/de');
+    navigate(language === 'en' ? '/' : '/de', { replace: true });
   }, [language]);
 
   return (

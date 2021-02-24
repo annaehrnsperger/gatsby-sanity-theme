@@ -44,11 +44,14 @@ const createLocalePage = (page, createPage) => {
   });
 
   extraLanguages.forEach((langCode) => {
+    // eslint-disable-next-line no-shadow
+    const { path, context, ...rest } = page;
+
     createPage({
-      ...page,
+      ...rest,
       path: `/${langCode}${page.path}`,
       context: {
-        slug: page.path,
+        ...context,
         locale: langCode,
       },
     });
@@ -70,16 +73,67 @@ exports.createPages = async ({ actions: { createPage } }) => {
   });
 };
 
-// multiple pages like blog posts
-// exports.createPages = ({ actions: { createPage } }) => {
-//   const page = {
-//     path: 'some-page',
-//     component: path.resolve(`./src/templates/some-page.js`),
-//     context: {
-//       slug: 'some-page-slug',
-//     },
-//   };
-//   createLocalePage(page, createPage);
+// blog posts and projects
+// exports.createPages = async ({ actions: { createPage }, graphql }) => {
+//   const result = await graphql(`
+//     query Slug {
+//       post: allSanityBlogPost {
+//         nodes {
+//           slug {
+//             current
+//           }
+//         }
+//       }
+//       project: allSanityProject {
+//         nodes {
+//           slug {
+//             current
+//           }
+//         }
+//       }
+//     }
+//   `);
+
+//   const posts = result.data.post.nodes;
+//   const projects = result.data.project.nodes;
+
+//   posts.forEach((post, i) => {
+//     createLocalePage(
+//       {
+//         path: `/blog/${post.slug.current}`,
+//         component: path.resolve(`./src/templates/post.js`),
+//         context: {
+//           slug: post.slug.current,
+//           next:
+//             i === posts.length - 1
+//               ? posts[0].slug.current
+//               : posts[i + 1].slug.current,
+//           prev:
+//             i === 0
+//               ? posts[posts.length - 1].slug.current
+//               : posts[i - 1].slug.current,
+//         },
+//       },
+//       createPage
+//     );
+//   });
+
+//   projects.forEach((project, i) => {
+//     createLocalePage(
+//       {
+//         path: `/projects/${project.slug.current}`,
+//         component: path.resolve(`./src/templates/project.js`),
+//         context: {
+//           slug: project.slug.current,
+//           next:
+//             i === projects.length - 1
+//               ? projects[0].slug.current
+//               : projects[i + 1].slug.current,
+//         },
+//       },
+//       createPage
+//     );
+//   });
 // };
 
 // create all standard pages with localization
