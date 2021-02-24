@@ -31,8 +31,8 @@ const Layout = ({ children, location }) => {
 
   injectGlobal`
     :root {
-    --text-color: ${textColor.hex};
-    --bg-color: ${bgColor.hex};
+    --c-text: ${textColor.hex};
+    --c-bg: ${bgColor.hex};
   }
   `;
 
