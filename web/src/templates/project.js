@@ -5,13 +5,13 @@ import Layout from '../components/organisms/layout';
 import SEO from '../components/organisms/seo';
 
 const Project = ({ data }) => (
-  <Layout>
+  <>
     <SEO siteTitle="Project" />
     <div>
       <h1>{data.projects.title}</h1>
       <Link to="/projects/">Projects Overview</Link>
     </div>
-  </Layout>
+  </>
 );
 
 export const query = graphql`

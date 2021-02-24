@@ -47,8 +47,8 @@ const Layout = ({ children, location }) => {
       {/**
        * Content
        */}
-      {/* <AnimatePresence exitBeforeEnter initial={false}> */}
       <Header />
+      {/* <AnimatePresence exitBeforeEnter initial={false}> */}
       <motion.main
       // key={location && `key${location.pathname}`}
       // initial={{ opacity: 0 }}
