@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { injectGlobal } from 'emotion';
+import { Global, css } from '@emotion/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import GlobalStyles from '../../styles/globalStyles';
 import Normalize from '../../styles/normalize';
@@ -29,18 +29,19 @@ const Layout = ({ children, location }) => {
 
   const { textColor, bgColor } = settings.nodes[0];
 
-  injectGlobal`
-    :root {
-    --c-text: ${textColor.hex};
-    --c-bg: ${bgColor.hex};
-  }
-  `;
-
   return (
     <LayoutProvider>
       {/**
        * Styles
        */}
+      <Global
+        styles={css`
+          :root {
+            --c-text: ${textColor.hex};
+            --c-bg: ${bgColor.hex};
+          }
+        `}
+      />
       <Normalize />
       <GlobalStyles />
       <Variables />
